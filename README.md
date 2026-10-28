@@ -1,4 +1,4 @@
-# Earthbender Business Insights (prototype)
+# Earthbender Business workbook analyzer
 
 Streamlit prototype built against the real Earthbender workbook schema.
 Reads CSV / XLSX / XLSM / XLS, builds a dashboard, flags likely data issues,
@@ -7,12 +7,19 @@ generates plain-Python recommendations, and exports a PDF + cleaned CSV.
 ## Install (Ubuntu)
 
 sudo apt update
+
 sudo apt install -y python3 python3-pip python3-venv
+
 mkdir -p ~/earthbender && cd ~/earthbender
+
 # copy app.py, requirements.txt, README.md here
+
 python3 -m venv .venv
+
 source .venv/bin/activate
+
 pip install --upgrade pip
+
 pip install -r requirements.txt
 
 ## Run
