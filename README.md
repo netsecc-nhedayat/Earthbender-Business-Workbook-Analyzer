@@ -82,24 +82,34 @@ try again. If it still fails, reinstall Python and make sure the
 In PowerShell:
 
 powershell
+
 cd $HOME
+
 mkdir earthbender
+
 cd earthbender
+
 Copy app.py, requirements.txt, README.md and USER_MANUAL.md into this
 folder (via File Explorer drag-and-drop, or Copy-Item).
 
 1-B.4 Create an isolated environment
 powershell
+
 python -m venv .venv
+
 If PowerShell blocks the activation script (you'll see a red "running scripts
 is disabled on this system" error), allow it once for your user:
 
 powershell
+
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
 Type Y when prompted. Then activate:
 
 powershell
+
 .\.venv\Scripts\Activate.ps1
+
 Your prompt should now start with (.venv).
 
 Using Command Prompt (cmd.exe) instead of PowerShell?
@@ -107,13 +117,18 @@ Activate with .\.venv\Scripts\activate.bat instead.
 
 1-B.5 Install dependencies
 powershell
+
 python -m pip install --upgrade pip
+
 python -m pip install -r requirements.txt
+
 This takes 1–3 minutes on the first run and needs an internet connection.
 
 1-B.6 Launch the app
 powershell
+
 streamlit run app.py
+
 Your default browser opens at http://localhost:8501. To stop the app, press
 Ctrl + C in PowerShell and confirm with Y.
 
@@ -122,7 +137,9 @@ Every time you want to use the app:
 
 powershell
 cd $HOME\earthbender
+
 .\.venv\Scripts\Activate.ps1
+
 streamlit run app.py
 
 ## Limitations
